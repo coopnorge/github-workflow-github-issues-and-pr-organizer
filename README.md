@@ -1,9 +1,47 @@
-# github-workflows-template
+# github-workflows-github-issues-and-pr-organizer
 
-Steps:
 
-1. update / rename `.github/workflows/example-workflow.yaml`
-2. A README describing
-   * what the workflow does
-   * which input variables 
-   * an example
+## Goals
+
+The goal of this workflow is allow teams to automatically move issues and pull
+request and issues from individual repos to a single project board.
+
+## Usage
+
+### Inputs
+
+```yaml
+inputs:
+   incoming_column:
+      required: true
+      type: string
+      description: The name of the column you want a created issue to go to
+   done_column:
+      required: true
+      type: string
+      description: The name of the column you want a closed issue to go to
+   project_id:
+      required: true
+      type: number
+      description: The number of the project with the board you want to move issues to
+```
+
+### Usage
+
+Add this job to your workflow:
+
+```yaml
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - closed
+jobs:
+  handle-issues:
+    uses: coopnorge/github-workflows-github-issues-and-pr-organizer/.github/workflows/reusable-handle-issues-workflow.yml@v1.0.0
+    with:
+      incoming_column: <Name of the column in your project board you want opened issues to end up in here>
+      done_column: <Name of the column in your project board you want closed issues to end up in here>
+      project_id: <Number of your project here>
+```
