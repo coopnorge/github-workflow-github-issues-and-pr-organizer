@@ -24,6 +24,9 @@ inputs:
       required: true
       type: number
       description: The number of the project with the board you want to move issues to
+secrets:
+   gh_app_secret_key:
+   required: true
 ```
 
 ### Usage
@@ -44,4 +47,5 @@ jobs:
       incoming_column: <Name of the column in your project board you want opened issues to end up in here>
       done_column: <Name of the column in your project board you want closed issues to end up in here>
       project_id: <Number of your project here>
+      gh_app_secret_key: ${{ secrets.PROJECTS_UPDATE_APP_PEM }}
 ```

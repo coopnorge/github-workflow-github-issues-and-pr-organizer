@@ -12,3 +12,4 @@ jobs:
       incoming_column: Incoming
       done_column: Done
       project_id: 5
+      gh_app_secret_key: ${{ secrets.PROJECTS_UPDATE_APP_PEM }}

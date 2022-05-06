@@ -14,9 +14,11 @@ on:
         required: true
         type: number
         description: The number of the project with the board you want to move issues to
+    secrets:
+      gh_app_secret_key:
+        required: true
 
 env:
-  gh_app_secret_key: ${{ secrets.PROJECTS_UPDATE_APP_PEM }}
   gh_app_installation_ID: 25206235
   gh_app_ID: 194396
   organization: coopnorge
@@ -35,7 +37,7 @@ jobs:
         with:
           status_value: ${{ inputs.incoming_column }}
           organization: ${{ env.organization }}
-          gh_app_secret_key: ${{ env.gh_app_secret_key }}
+          gh_app_secret_key: ${{ secrets.gh_app_secret_key }}
           gh_app_ID: ${{ env.gh_app_ID }}
           gh_app_installation_ID: ${{ env.gh_app_installation_ID }}
           project_id: ${{ inputs.project_id }}
@@ -53,7 +55,7 @@ jobs:
         with:
           status_value: ${{ inputs.done_column }}
           organization: ${{ env.organization }}
-          gh_app_secret_key: ${{ env.gh_app_secret_key }}
+          gh_app_secret_key: ${{ secrets.gh_app_secret_key }}
           gh_app_ID: ${{ env.gh_app_ID }}
           gh_app_installation_ID: ${{ env.gh_app_installation_ID }}
           project_id: ${{ inputs.project_id }}
