@@ -41,11 +41,12 @@ on:
       - reopened
       - closed
 jobs:
-  handle-issues:
-    uses: coopnorge/github-workflows-github-issues-and-pr-organizer/.github/workflows/reusable-handle-issues-workflow.yml@v1.0.0
-    with:
-      incoming_column: <Name of the column in your project board you want opened issues to end up in here>
-      done_column: <Name of the column in your project board you want closed issues to end up in here>
-      project_id: <Number of your project here>
-      gh_app_secret_key: ${{ secrets.PROJECTS_UPDATE_APP_PEM }}
+   handle-issues:
+      uses: coopnorge/github-workflows-github-issues-and-pr-organizer/.github/workflows/reusable-handle-issues-workflow.yml@v1.0.0
+      with:
+         incoming_column: <Name of the column in your project board you want opened issues to end up in here>
+         done_column: <Name of the column in your project board you want closed issues to end up in here>
+         project_id: <Number of your project here>
+      secrets:
+         gh_app_secret_key: ${{ secrets.PROJECTS_UPDATE_APP_PEM }}
 ```
