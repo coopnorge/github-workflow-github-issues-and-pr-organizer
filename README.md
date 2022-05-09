@@ -42,7 +42,7 @@ on:
       - closed
 jobs:
    handle-issues:
-      uses: coopnorge/github-workflows-github-issues-and-pr-organizer/.github/workflows/reusable-handle-issues-workflow.yml@v1.0.0
+      uses: coopnorge/github-workflows-github-issues-and-pr-organizer/.github/workflows/reusable-handle-issues-workflow.yml@v1
       with:
          incoming_column: <Name of the column in your project board you want opened issues to end up in here>
          done_column: <Name of the column in your project board you want closed issues to end up in here>
