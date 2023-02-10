@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: github-workflow-github-issues-and-pr-organizer
+  title: Issues And PR Organizer GitHub Actions Workflow
+  description: Automation workflow to mange issues and PRs in projects
+  annotations:
+    github.com/project-slug: coopnorge/github-workflow-github-issues-and-pr-organizer
+spec:
+  type: library
+  lifecycle: experimental
+  owner: engineering
