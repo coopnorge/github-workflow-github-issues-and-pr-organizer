@@ -29,7 +29,7 @@ jobs:
     if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened')
     steps:
       - name: Move issue to ${{ inputs.incoming_column }}
-        uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # pin@v2.2.1
+        uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # v2.2.1
         env:
           DEBUG_COMMANDS: true
           DEBUG_LOG: true
@@ -47,7 +47,7 @@ jobs:
     if: github.event_name == 'issues' && github.event.action == 'closed'
     steps:
       - name: Moved issue to ${{ inputs.done_column }}
-        uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # pin@v2.2.1
+        uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # v2.2.1
         env:
           DEBUG_COMMANDS: true
           DEBUG_LOG: true
