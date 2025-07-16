@@ -27,6 +27,10 @@ jobs:
     name: issue_opened_or_reopened
     runs-on: ubuntu-24.04
     if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened')
+    permissions:
+      issues: write
+      contents: read
+      projects: write
     steps:
       - name: Move issue to ${{ inputs.incoming_column }}
         uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # pin@v2.2.1
@@ -45,6 +49,10 @@ jobs:
     name: issue_closed
     runs-on: ubuntu-24.04
     if: github.event_name == 'issues' && github.event.action == 'closed'
+    permissions:
+      issues: write
+      contents: read
+      projects: write
     steps:
       - name: Moved issue to ${{ inputs.done_column }}
         uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # pin@v2.2.1
