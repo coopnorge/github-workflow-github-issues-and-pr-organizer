@@ -50,4 +50,3 @@ jobs:
       - run: exit 1
         name: "Catch errors"
         if: ${{ contains(join(needs.*.result, ','), 'failure') || contains(join(needs.*.result, ','), 'cancelled') }}
-
