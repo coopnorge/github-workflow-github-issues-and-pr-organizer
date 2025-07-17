@@ -45,7 +45,6 @@ jobs:
       permissions:
         issues: write
         contents: read
-        projects: write
       with:
          incoming_column: <Name of the column in your project board you want opened issues to end up in here>
          done_column: <Name of the column in your project board you want closed issues to end up in here>
