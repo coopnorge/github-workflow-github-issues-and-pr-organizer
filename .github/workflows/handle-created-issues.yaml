@@ -11,7 +11,6 @@ jobs:
     permissions:
       issues: write
       contents: read
-      projects: write
     with:
       incoming_column: Incoming
       done_column: Done

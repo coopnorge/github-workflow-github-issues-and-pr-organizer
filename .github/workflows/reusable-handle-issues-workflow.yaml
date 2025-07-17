@@ -30,7 +30,6 @@ jobs:
     permissions:
       issues: write
       contents: read
-      projects: write
     steps:
       - name: Move issue to ${{ inputs.incoming_column }}
         uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # pin@v2.2.1
@@ -52,7 +51,6 @@ jobs:
     permissions:
       issues: write
       contents: read
-      projects: write
     steps:
       - name: Moved issue to ${{ inputs.done_column }}
         uses: leonsteinhaeuser/project-beta-automations@939000fb1900c9fc4f7b5058a09d9f833ebc6859 # pin@v2.2.1
