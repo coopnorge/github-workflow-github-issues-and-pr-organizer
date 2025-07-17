@@ -1,4 +1,4 @@
----
+# nonk8s
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -7,6 +7,9 @@ metadata:
   description: Automation workflow to mange issues and PRs in projects
   annotations:
     github.com/project-slug: coopnorge/github-workflow-github-issues-and-pr-organizer
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - github-workflow
 spec:
   type: library
   lifecycle: experimental
