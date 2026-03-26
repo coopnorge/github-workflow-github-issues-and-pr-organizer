@@ -4,7 +4,7 @@ metadata:
   name: github-workflow-github-issues-and-pr-organizer
 spec:
   description: "No description provided"
-
+  visibility: public
   branches:
     default: main
     protection:
