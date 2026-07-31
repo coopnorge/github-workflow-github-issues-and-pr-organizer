@@ -7,7 +7,7 @@ on:
       - closed
 jobs:
   handle-issues:
-    uses: "./.github/workflows/reusable-handle-issues-workflow.yaml"
+    uses: ./.github/workflows/reusable-handle-issues-workflow.yaml
     permissions:
       issues: write
       contents: read
